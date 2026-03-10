@@ -1,0 +1,342 @@
+%-------------------------
+% Resume in Latex
+% Author : Adapted from Arkadeep Das, Manas Daruka, Ayush Sharma, Abhinav Gupta
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.8cm, top=0.8cm, right=0.6cm, bottom=0.6cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	 center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{ :\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeAchievement}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} :\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1} {#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeCPItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\resumeCPItemListEnd}{\end{itemize}\end{justify}\vspace{-3.5mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Rishabh Thakur} % Your Name
+\newcommand{\course}{B.Tech in Computer Science and Engineering} % Your Course
+\newcommand{\phone}{9319211735} % Your Phone Number
+\newcommand{\emaila}{t.rishabh@iitg.ac.in} %Email 1
+\newcommand{\emailb}{rishabh12in2019@gmail.com} %Email 2
+\newcommand{\github}{rsbhthakur} %Github
+\newcommand{\linkedin}{rsbhthakur} %linkedin
+\newcommand{\website}{} %Website (optional)
+
+\usepackage{fontawesome5}
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{iitg_logo.jpg}
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+   & +91-\phone\\
+  \textbf{\LARGE \name} & \href{mailto:\emaila}{\emaila} \\
+   {Roll No. 250101084}  &  \href{mailto:\emailb}{\emailb}\\
+  \course 
+   &  \href{https://github.com/\github}{ \faGithub \hspace{0.4mm} github.com/\github}\\
+   {Indian Institute of Technology, Guwahati}
+   & \href{https://www.linkedin.com/in/\linkedin}{\faLinkedin \hspace{0.4mm} linkedin.com/in/\linkedin}\\
+\end{tabularx}
+}
+
+\vspace{-6mm}
+%-----------EDUCATION-----------------
+\section{Education}
+\vspace{1mm}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech. & Indian Institute of Technology, Guwahati & 7.8 (Current) & 2025-Present\\
+  \hline
+  Senior Secondary & CBSE Board & 96.6\% & 2025 \\
+  \hline
+  Secondary & CBSE Board & 97.8\% & 2023 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Quantitative Portfolio Optimizer – Kriti 2026} %Project Name
+      {Inter Hostel Technical Competition, IITG} %Project Name, Location Name
+      {Feb. 2026} %Event Dates
+      {\faGithub \href{https://github.com/RsbhThakur/Kriti26-Quant}{ github.com/RsbhThakur/Kriti26-Quant}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Developed an efficient C++ algorithm to maximize portfolio returns under real-world constraints, achieving top decile performance in the quantitative finance challenge.}
+        \item {Implemented dynamic programming and greedy heuristics to handle large-scale financial datasets with minimal latency.}
+        \item {Validated results using historical market data and benchmarked against standard optimization libraries.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {AI/ML Model Deployment Platform – Kriti 2026} %Project Name
+      {Group Project, Inter Hostel Technical Competition, IITG} %Project Name, Location Name
+      {Feb. 2026} %Event Dates
+      {\faGithub \href{https://github.com/RsbhThakur/Kriti26-AIML}{ github.com/RsbhThakur/Kriti26-AIML}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Designed and built a full‑stack web application to serve a pre‑trained ML model for predictive analysis (classification/regression task).}
+        \item {Developed the backend using Node.js/Express and integrated the model via REST APIs; created a responsive frontend with React for real‑time inference.}
+        \item {Contributed to model preprocessing pipeline and assisted in achieving 92\% accuracy on the evaluation dataset.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {Opti26 – Resource Optimization Platform} %Project Name
+      {Group Project, Kriti 2026, IITG} %Project Name, Location Name
+      {Feb. 2026} %Event Dates
+      {\faGithub \href{https://github.com/aditya-prabhakar-13/Opti26_Backend}{ github.com/Opti26\_Backend}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Engineered backend APIs (Node.js, Express, MongoDB) and web frontend (React) for an optimization platform that allocates resources under constraints.}
+        \item {Single‑handedly developed the complete mobile frontend using React Native, enabling cross‑platform access with real‑time data sync.}
+        \item {Implemented user authentication, interactive dashboards, and visualizations, resulting in a 40\% faster decision‑making workflow during the competition.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {IRCTC Automation Toolkit} %Project Name
+      {Personal Project} %Project Name, Location Name
+      {Dec. 2025} %Event Dates
+      {\faGithub \href{https://github.com/RsbhThakur/irctc-automation}{ github.com/RsbhThakur/irctc-automation}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Built a Python automation suite using Selenium and Requests to monitor train seat availability and auto‑fill booking forms on IRCTC.}
+        \item {Implemented CAPTCHA handling via 2Captcha API and integrated Telegram bot for instant alerts on vacancy.}
+        \item {Reduced manual booking time by 70\% and successfully booked tickets during high‑demand periods.}
+      \resumeItemListEnd
+
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Other Projects} 
+    \end{tabular*}
+    \vspace{-3mm}
+    
+        \resumeCPItemListStart
+        \item{ \textbf{\href{https://github.com/RsbhThakur/exam-server}{ Exam Server \ExternalLink}}: Developed a secure online examination platform with live proctoring, automated grading, and real‑time candidate monitoring using Node.js and Socket.IO.}
+        \item{ \textbf{\href{https://github.com/RsbhThakur/PolyChat}{ PolyChat \ExternalLink}}: Created a cross‑platform chat application supporting multi‑language messaging (using Google Translate API) and end‑to‑end encryption; built with Flutter and Firebase.}
+        \resumeCPItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+%-----------ACHIEVEMENTS-----------------
+\section{Achievements}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+\resumeAchievement{JEE Advanced 2025}
+    {Secured All India Rank 652 among 1,80,000+ candidates}
+    {2025}
+\resumeAchievement{JEE Mains 2025}
+    {Secured All India Rank 852 among 14,00,000+ candidates}
+    {2025}
+\resumeAchievement{Regional Mathematics Olympiad (RMO)}
+    {Qualified for INMO 2024 and 2025; ranked among top 30 in Delhi region (2023) and top 6 (2024) with one of the highest marks (80)}
+    {2023-24}
+\resumeAchievement{CMI Entrance Examination 2025}
+    {Placed in top 40 students across India, receiving admission offer with scholarship option at Chennai Mathematical Institute}
+    {2025}
+\resumeAchievement{ISI Admission Test 2025}
+    {Secured a merit rank in top 180 nationwide for B.Stat (Hons) at ISI Kolkata}
+    {2025}
+\resumeAchievement{National Standard Examination in Physics (NSEP)}
+    {Among top 350 qualifiers for INPhO 2025 out of 58,000+ candidates}
+    {2024-25}
+\resumeAchievement{Zonal Informatics Olympiad (ZIO)}
+    {Qualified for INOI 2025 by ranking in top 115 students}
+    {2025}
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+\vspace{-0.2mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages} % Category
+    { C, C++, Python, JavaScript, Java }
+  \resumeSubItem{Databases}
+    { MySQL, MongoDB }
+  \resumeSubItem{Web Technologies}
+    { HTML, CSS, Node.js, Express.js }
+  \resumeSubItem{Miscellaneous}
+    { Git, NumPy, Pandas, Quantitative Trading Basics, Web Scraping (Selenium, BeautifulSoup) }
+     \vspace{1mm}
+ \resumeHeadingSkillEnd
+\vspace{-2mm}
+
+%-----------KEY COURSES TAKEN-----------------
+\section{Key courses taken}
+\resumeHeadingSkillStart
+\resumeSubItem{Computer Science}
+    {Data Structures and Algorithms, Introduction to Computer Systems, Digital Design, Object Oriented Programming, Introduction to Programming Languages}
+ \resumeSubItem{Mathematics} % Category
+    { Number Theory and Algebra, Probability Theory and Random Processes, Discrete Mathematics, Linear Algebra, Real Analysis}
+ \resumeHeadingSkillEnd
+ \vspace{1mm}
+\vspace{-5mm}
+
+%-----------POSITIONS OF RESPONSIBILITY-----------------
+\section{Positions of Responsibility}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{Deputy Coordinator}
+    { \textit{Coding Club, IIT Guwahati}}
+    {Jan. 2026 - Present}
+\resumeCPItemListStart
+\item{\hspace{0.5mm} Organizing workshops and competitive programming contests; mentoring junior members in algorithmic problem solving.}
+\item{\hspace{0.5mm} Implemented backend of the \textbf{Room Cleaning feature} for the \textbf{Habit-IITG app} (Hostels Affair Board), enabling students to request and track cleaning services; built using Node.js and MongoDB.}
+\resumeCPItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-2mm}
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,321 @@
+%-------------------------
+% Resume in Latex
+% Based on IIT Guwahati Resume Template
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{4.08003pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1cm, top=0.8cm, right=0.8cm, bottom=0.6cm}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{1.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2.5mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+
+\newcommand{\name}{Rishabh Thakur} % Your Name
+\newcommand{\course}{B.Tech in Computer Science and Engineering} % Your Course
+\newcommand{\roll}{ 250101084} % Your Roll No.
+\newcommand{\phone}{9319211735} % Your Phone Number
+\newcommand{\emaila}{rishabh12in2019@gmail.com} %Email 1
+\newcommand{\emailb}{t.rishabh@iitg.ac.in} %Email 2
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+\vspace{-3mm}
+\includegraphics[width=2cm,clip]{iitg_logo.jpg}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {Roll No:\roll} & \href{mailto:\emailb}{\emailb} \\
+  \course &  \href{mailto:\emaila}{\emaila} \\
+   {Indian Institute of Technology, Guwahati} & \href{https://github.com/RsbhThakur}{\faGithub \hspace{0.4mm} github.com/rsbhthakur} \\
+   & \href{https://www.linkedin.com/in/rsbhthakur}{\faLinkedin \hspace{0.4mm} linkedin.com/in/rsbhthakur}
+\end{tabularx}
+}
+
+%-----------EDUCATION-----------------
+\vspace{-5mm}
+\section{Education}
+\setlength{\tabcolsep}{5pt}
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech. & Indian Institute of Technology, Guwahati & 7.80 (Current) & 2025-Present\\
+  \hline
+  Senior Secondary & CBSE Board & 96.6\% & 2025 \\
+  \hline
+  Secondary & CBSE Board & 97.8\% & 2023 \\
+  \hline
+\end{tabularx}}
+\vspace{-3mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Velora -- Corporate Mobility Optimization Platform} %Project Name
+      {Group Project, Kriti 2026, Inter Hostel Technical Competition, IITG} %Project Name, Location Name
+      {Jan. 2026 -- Feb. 2026} %Event Dates
+      {\faGithub \href{https://github.com/aditya-prabhakar-13/Opti26_Backend}{ GitHub} \hspace{0.5mm} | \hspace{0.5mm} \faGlobe \href{https://opti26-veloral.vercel.app/}{ Live Demo}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Developed a full-stack \textbf{corporate mobility optimization} platform with \textbf{Django} backend, \textbf{React + Vite} web frontend, and a cross-platform \textbf{Capacitor Android} mobile app.}
+        \item {Engineered backend APIs for \textbf{Excel parsing}, optimization orchestration with C++ executables, \textbf{OSRM}-based route geometry, and dynamic employee insertion workflows.}
+        \item {Built a responsive web dashboard for uploading data, tracking optimization progress in real-time, and visualizing \textbf{route geometry} on interactive maps.}
+        \item {Implemented \textbf{mobile app} using Capacitor, synced with the web UI for seamless cross-platform access.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {Momentum Trading Strategy -- Quantitative Finance} %Project Name
+      {Kriti 2026, Inter Hostel Technical Competition, IITG} %Project Name, Location Name
+      {Jan. 2026 -- Feb. 2026} %Event Dates
+      {\faGithub \href{https://github.com/RsbhThakur/Kriti26-Quant}{ GitHub}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Designed a fully systematic, rules-based, \textbf{long-only equity momentum strategy} for the Indian market (NSE 500 universe), achieving \textbf{17.70\% CAGR} vs.\ benchmark 8.62\% with a \textbf{Sharpe ratio of 0.92}.}
+        \item {Implemented \textbf{multi-horizon momentum scoring} (1m/3m/6m/12m) with \textbf{volatility-adjusted} weighting, \textbf{trend quality} (slope $\times$ R\textsuperscript{2}), and \textbf{breakout quality} filters using rank-based composite scoring.}
+        \item {Leveraged \textbf{Numba JIT} for $\sim$10$\times$ speedup on rolling computations; applied \textbf{inverse-volatility} position weighting, sector caps, and dual stop-loss mechanisms for robust risk management.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {BDH Visualizer -- Neural Network Analytics Dashboard} %Project Name
+      {Group Project, Kriti 2026, Inter Hostel Technical Competition, IITG} %Project Name, Location Name
+      {Jan. 2026 -- Feb. 2026} %Event Dates
+      {\faGithub \href{https://github.com/RsbhThakur/Kriti26-AIML}{ GitHub}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Built an animation-first \textbf{11-tab interactive visualization} platform for Brain-Derived Heuristics (BDH), featuring force-directed neural graphs, \textbf{3D walkthroughs} using \textbf{Three.js}, and attention heatmaps.}
+        \item {Developed the entire \textbf{web frontend} with JavaScript, HTML/CSS, including Hebbian weight animations, sparse brain heatmaps, topology analysis, and step-by-step inference replay.}
+        \item {Implemented \textbf{Streamlit}-based Python backend with inference scripts for pre-computing visualization data.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {IRCTC Booking Automation} %Project Name
+      {Personal Project} %Project Name, Location Name
+      {Feb. 2026} %Event Dates
+      {\faGithub \href{https://github.com/RsbhThakur/irctc-automation}{ GitHub}} %Website
+      \vspace{1mm}
+      \resumeItemListStart
+        \item {Engineered a high-reliability \textbf{IRCTC ticket booking automation} system using \textbf{Playwright} for real-browser interaction with login/Book Now \textbf{time-gating}, resilient retry logic, and passenger autofill.}
+        \item {Implemented \textbf{multi-strategy captcha solving} pipeline (EasyOCR, Remote API, Google Vision with fallback), configurable timing controls, and \textbf{UPI QR payment} handoff with secure local config templates.}
+      \resumeItemListEnd
+
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Other Projects} 
+    \end{tabular*}
+    \vspace{-3mm}
+    
+    \resumeItemListStart
+        \item{ \textbf{\href{https://github.com/RsbhThakur/PolyChat}{PolyChat}}: A multi-AI model chat platform that \textbf{intelligently routes queries} to different AI models based on context, built with \textbf{Node.js}, \textbf{MongoDB}.}
+        \item{ \textbf{\href{https://github.com/RsbhThakur/exam-server}{Exam Server}}: Automated question dump generator for Microsoft Certification Exams using \textbf{Node.js} and \textbf{GitHub Actions} CI/CD for scheduled snapshot generation.}
+    \resumeItemListEnd
+      
+\resumeSubHeadingListEnd
+\vspace{-6.5mm}
+
+%-----------ACHIEVEMENTS-----------------
+\section{Achievements}
+\vspace{+0.7mm}
+\resumeSubHeadingListStart
+\resumeSubItem{ Regional Mathematics Olympiad (RMO)}
+    { Among \textbf{top 30} students (class 8--11) from Delhi in 2023 and \textbf{top 6} from class 12 in 2024 scoring \textbf{80 marks} (one of the highest in region); qualified for \textbf{INMO 2024 \& INMO 2025}.}
+\vspace{+0.2mm}
+\resumeSubItem{ CMI Entrance Examination 2025}
+    { Among the \textbf{top 40} students nationally to receive an admission offer \textbf{with scholarship} for \textbf{Bsc Mathematics (Hons)} at Chennai Mathematical Institute.}
+\vspace{+0.2mm}
+\resumeSubItem{ ISI Admission Exam 2025}
+    { Among the \textbf{top 180 merit list} nationally; received a seat offer for \textbf{B.Stat (Hons)} at ISI Kolkata.}
+\vspace{+0.2mm}
+\resumeSubItem{ JEE Advanced 2025}
+    { Secured \textbf{AIR 652} among 1,80,000+ registered candidates.}
+\vspace{+0.2mm}
+\resumeSubItem{ JEE Mains 2025}
+    { Secured \textbf{AIR 852} among 14,00,000+ registered candidates.}
+\vspace{+0.2mm}
+\resumeSubItem{ National Standard Examination in Physics (NSEP) 2024--25}
+    { Among the \textbf{top 350} students that qualified for \textbf{INPhO 2025}, where total enrollment was 58,000.}
+\vspace{+0.2mm}
+\resumeSubItem{ Zonal Informatics Olympiad (ZIO) 2025}
+    { Among the \textbf{top 115} students nationally that qualified for \textbf{INOI 2025}.}
+\vspace{+0.2mm}
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+\vspace{-0.7mm}
+\begin{multicols}{2}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages}
+    {C, C++, Python, JavaScript, Java}
+    \vspace{-0.3mm}
+ \resumeSubItem{Web Technologies}
+    {HTML, CSS, Node.js, Express.js}
+    \vspace{-0.3mm}
+    
+ \columnbreak
+\resumeSubItem{Databases}
+    {MySQL, MongoDB}
+    \vspace{-0.3mm}
+\resumeSubItem{Miscellaneous}
+    {Git, NumPy, Pandas, Web Scraping, \LaTeX}
+    \vspace{-0.3mm}
+ \resumeHeadingSkillEnd
+\end{multicols}
+
+\vspace{+0.5mm}
+\hfill \textit{\footnotesize{}} \hspace{3mm}
+\vspace{-8mm}
+
+%-----------KEY COURSES-----------------
+\section{Key Courses Taken}
+\vspace{+0.7mm}
+\resumeHeadingSkillStart
+\resumeSubItem{Computer Science}
+ {Data Structures \& Algorithms, Introduction to Computer Systems, Digital Design, Object Oriented Programming, Introduction to Programming Languages}
+\vspace{-0.7mm}
+\resumeSubItem{Mathematics}
+    {Number Theory \& Algebra, Probability Theory \& Random Processes, Discrete Mathematics, Linear Algebra, Real Analysis}
+ \resumeHeadingSkillEnd
+ \vspace{-2.7mm}
+\hfill \textit{\footnotesize{ }} \hspace{3mm}
+\vspace{-4.7mm}
+
+%-----------POSITIONS OF RESPONSIBILITY-----------------
+\section{Positions of Responsibility}
+\vspace{-1.5mm}
+\resumeSubHeadingListStart
+\resumePOR{Deputy Coordinator} % Position
+    { Coding Club, IIT Guwahati} %Club,Event
+    {Jan. 2026 -- Present} %Tenure Period
+    \resumeItemListStart
+    \vspace{-0.3mm}
+    \item {Implemented the \textbf{backend} of the Room Cleaning feature for the \textbf{Habit-IITG} app, serving the Hostels Affairs Board of IIT Guwahati.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-3mm}
+
+\hrule
+
+%-------------------------------------------
+\end{document}
