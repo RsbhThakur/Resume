@@ -77,6 +77,18 @@
     \vspace{-2.5mm}
 }
 
+\newcommand{\resumeAchievement}[3]{
+\vspace{0.4mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{@{}p{0.84\textwidth}@{\extracolsep{\fill}}r@{}}
+        {\begingroup
+        \newlength{\achieveindent}
+        \settowidth{\achieveindent}{\textbf{#1}:\ }
+        \textbf{#1}:\ \parbox[t]{\dimexpr0.84\textwidth-\achieveindent\relax}{#2}
+        \endgroup} & \textit{\small{#3}}
+    \end{tabular*}
+    \vspace{-1.8mm}
+}
+
 \newcommand{\resumeSubheading}[4]{
 \vspace{0.5mm}\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -221,27 +233,27 @@
 \section{Achievements}
 \vspace{+0.7mm}
 \resumeSubHeadingListStart
-\resumeSubItem{ Regional Mathematics Olympiad (RMO)}
-    { Among \textbf{top 30} students (class 8--11) from Delhi in 2023-24 and \textbf{top 6} from class 12 in 2024-25 scoring \textbf{80 marks} (one of the highest in region); qualified for \textbf{INMO 2024 \& INMO 2025}.}
-\vspace{+0.2mm}
-\resumeSubItem{ CMI Entrance Examination 2025}
-    { Among the \textbf{top 40} students nationally to receive an admission offer \textbf{with scholarship} for \textbf{Bsc Mathematics (Hons)} at Chennai Mathematical Institute.}
-\vspace{+0.2mm}
-\resumeSubItem{ ISI Admission Exam 2025}
-    { In the \textbf{top 180 merit list} nationally; received a seat offer for \textbf{B.Stat (Hons)} at ISI Kolkata.}
-\vspace{+0.2mm}
-\resumeSubItem{ JEE Advanced 2025}
-    { Secured \textbf{AIR 652} among 1,80,000+ registered candidates.}
-\vspace{+0.2mm}
-\resumeSubItem{ JEE Mains 2025}
-    { Secured \textbf{AIR 852} among 14,00,000+ registered candidates.}
-\vspace{+0.2mm}
-\resumeSubItem{ National Standard Examination in Physics (NSEP) 2024--25}
-    { Among the \textbf{top 350} students that qualified for \textbf{INPhO 2025}, where total enrollment was 58,000.}
-\vspace{+0.2mm}
-\resumeSubItem{ Zonal Informatics Olympiad (ZIO) 2025}
-    { Among the \textbf{top 115} students nationally that qualified for \textbf{INOI 2025}.}
-\vspace{+0.2mm}
+\resumeAchievement{CMI Entrance}
+    {In the \textbf{top 40} merit list in Entrance Exam conducted by Chennai Mathematical Institute.}
+    {2025}
+\resumeAchievement{ISI Admission Exam}
+    {In the \textbf{top 180} national merit list to receive \textbf{B.Stat (Hons)} seat offer at ISI Kolkata.}
+    {2025}
+\resumeAchievement{JEE Advanced}
+    {Secured \textbf{AIR 652} among 1,80,000+ registered candidates.}
+    {2025}
+\resumeAchievement{JEE Mains}
+    {Secured \textbf{AIR 852} among 14,00,000+ registered candidates.}
+    {2025}
+\resumeAchievement{Zonal Informatics Olympiad (ZIO)}
+    {Placed among the \textbf{top 115} nationally and qualified for \textbf{INOI 2025}.}
+    {2025}
+\resumeAchievement{NSEP}
+    {Placed among the \textbf{top 350} and qualified for \textbf{INPhO 2025} from a total enrollment of 58,000.}
+    {2024}
+\resumeAchievement{RMO}
+    {Among Delhi \textbf{top 30} (2023), and \textbf{top 6} (2024) with \textbf{80 marks} and qualified for \textbf{INMO 2024 \& 2025}.}
+    {2023 \& 2024}
 
 \resumeSubHeadingListEnd
 \vspace{-6mm}
